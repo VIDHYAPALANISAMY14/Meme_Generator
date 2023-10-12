@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meme Museum</title>
+  <style>
+    /* Style the vertical tabs */
+    *{
+    text-align:center;
+    margin:0%;
+    padding-top:10px;
+    padding-bottom:10px;
+    }
+    .vertical-tabs {
+      display: flex;
+    }
+
+    .vertical-tabs .tab {
+      flex-basis: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .vertical-tabs .tab:hover {
+      background-color: #111;
+    }
+
+    .vertical-tabs .content {
+      flex-basis: 100%;
+      padding: 20px;
+      color: white;
+      background-size: cover;
+    }
+
+    /* Set the background images */
+    #home {
+      background-image: url("https://wallpapers.com/images/hd/iconic-meme-faces-characters-h1qy4iwapque501g.jpg");
+      width:100%;
+      height:500px;
+      font-size:20px;
+    }
+
+    #login {
+      background-image: url("https://curlytales.com/wp-content/uploads/2021/08/Meme-Museum.jpg");
+      padd
+    }
+
+<!--    #about {-->
+<!--      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjIMTN3GDa41SdO0OGUGX0JnHBNlp30i6l20QcAPbZRWHdIB9AVEb5-ygiKqr13k2q4RA&usqp=CAU");-->
+<!--    }-->
+
+    #contact {
+      background-image: url("https://c4.wallpaperflare.com/wallpaper/249/715/678/snow-night-animals-doge-wallpaper-preview.jpg");
+      margin:0px;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #111;
+    }
+     .content {
+      background-image: url('https://c4.wallpaperflare.com/wallpaper/249/715/678/snow-night-animals-doge-wallpaper-preview.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin: 50px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Vertical tabs -->
+  <div class="vertical-tabs">
+    <!-- Home tab -->
+    <div class="tab" onclick="openTab('home')">Home</div>
+
+    <!-- Login tab -->
+    <div class="tab" onclick="openTab('login')">Login</div>
+
+    <!-- About tab -->
+    <div class="tab" onclick="openTab('about')">About</div>
+
+    <!-- Contact Us tab -->
+    <div class="tab" onclick="openTab('contact')">Contact Us</div>
+  </div>
+
+  <!-- Content sections -->
+  <div id="home" class="content">
+    <h2 style="color:black">Welcome to My Website</h2>
+    <p style="color:black">A Curated Collection of Hilarity is a project aimed at creating a digital museum
+that showcases a curated collection of memes from various online platforms. The
+project aims to preserve the history and cultural significance of internet memes,
+which have become a significant part of modern-day communication and
+entertainment</p>
+  </div>
+
+  <div id="login" class="content">
+    <h2>Login</h2>
+    <p>Please log in to access your account.</p>
+
+<form action="/login" method="post">
+    <table>
+        <tr><td>Name</td>
+        <td><input type="text" name="un"></td></tr>
+        <tr><td>Password</td>
+        <td><input type="'password" name="pas"></td></tr>
+        <tr><td><input type="submit"></td></tr>
+    </table>
+</form>
+
+  </div>
+
+  <div id="about" class="content">
+<div class="container">
+  <h1>About Us</h1>
+    <p>Welcome to Meme Mesuem</p>
+    <p>We are a team developing this project </p>
+    <p>Contact us for more information:</p>
+    <ul>
+      <li>Team ID: NM2023TMID19730</li>
+      <li>Team Leader: Vidhya P </li>
+      <li>Team Members: Sowmiyaa TN<br> Sowmiyaa C<br>Yalini <br> vichitra s </li>
+    </ul>
+  </div>
+</div>
+
+
+
+  <div id="contact" class="content">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for any inquiries or feedback.</p>
+
+
+
+  <h2>Contact Us</h2>
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+<script>
+    // JavaScript function to toggle between tabs
+    function openTab(tabName) {
+      var i, contents;
+      contents = document.getElementsByClassName("content");
+      for (i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+  </script>
+</body>
+</html>

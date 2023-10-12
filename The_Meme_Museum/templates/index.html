@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    *{
+    align-items:center;
+    padding:20%;
+    }
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
+        .body{
+            background-image:url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");
+        }
+
+    </style>
+    <title>GENERATOR</title>
+</head>
+<body>
+    <div>
+        <h1>Meme generate</h1>
+        <h3>Click on the button to see meme</h3>
+        <!-- Add id to image -->
+        <img id="image"
+             src="https://images.popbuzz.com/images/54818?width=1200&crop=4_3&signature=TcSIdLkhtTbSytbYhR0Ox4u1sb8="
+             alt="meme" />
+    </div>
+    <button type="button" onclick="show()" id="btnID">
+        Show Image
+    </button>
+
+    <script>
+        function show() {
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image')
+                .style.display = "block";
+            document.getElementById('btnID')
+                .style.display = "none";
+        }
+    </script>
+</body>
+</html>
